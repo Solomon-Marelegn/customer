@@ -1,4 +1,0 @@
-Flask==2.0.1
-matplotlib==3.4.3
-pymysql==1.0.2
-paramiko==2.8.0
