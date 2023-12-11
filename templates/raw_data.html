@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}Feedback Table{% endblock %}
+
+{% block content %}
+<link rel="stylesheet" href="../static/raw_data.css">
+
+<div class="table-container">
+    <form method="POST" action="{{ url_for('raw_data') }}">
+        <label for="row_count">Number of Rows:</label>
+        <input type="number" name="row_count" id="row_count" min="1" value="{{ row_count }}" required>
+        <input type="submit" value="Show">
+    </form>
+    <div class=".table-scroll">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Feedback</th>
+                    <th>Time</th>
+                    <th>Date</th>
+                    <th>Region</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                    <tr>
+                        <td>{{ loop.index }}</td>
+                        <td>{{ row.feedback }}</td>
+                        <td>{{ row.time }}</td>
+                        <td>{{ row.date }}</td>
+                        <td>{{ row.region }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
