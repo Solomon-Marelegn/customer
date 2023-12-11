@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block title %}total{% endblock %}
+{% block content %}
+<head>
+    <link rel="stylesheet" href="../static/total.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<div class="main_total">
+    <div class="chart-field">
+        <h3>Statistics</h3>
+            <div class="chart-container">
+                <div class="pie-chart">
+                    <img src="{{ pie_chart_data }}" alt="Pie Chart">
+                </div>
+                <div class="bar-chart">
+                    <img src="{{ bar_chart_data }}" alt="Bar Chart">
+                </div>
+            </div>
+    </div>
+        <div class="input-field">
+            <h3>Total amounts</h3>
+            <div class="input-cont">
+                {% for title, amount in data.items() %}
+                    <div class="input">
+                        <p class="input_title">{{ title }}</p>
+                        <p class="input_amount">{{ amount }}</p>
+                    </div>
+                {% endfor %}
+
+            </div>
+        </div>
+
+    <div class="log-field">
+        <h3>Recent feedbacks</h3>
+        <div class="log-container">
+            <table class="log-table">
+                <thead>
+                    <tr>
+                        <th>Feedback</th>
+                        <th>Time</th>
+                        <th>Date</th>
+                        <th>Region</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in latest_data %}
+                        <tr>
+                            <td>{{ row.feedback }}</td>
+                            <td>{{ row.time }}</td>
+                            <td>{{ row.date }}</td>
+                            <td>{{ row.region }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

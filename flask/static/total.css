@@ -1,0 +1,109 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+h3 {
+    margin: 10px;
+}
+
+.main_total {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    padding: 10px;
+    max-height: 100vh;
+}
+
+.chart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.pie-chart,
+.bar-chart {
+    flex: 0.8;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.pie-chart img,
+.bar-chart img {
+    width: 100%;
+    height: 100%;
+    border-radius: 6px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.input-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5px;
+}
+
+.input {
+    width: 30%;
+    min-width: 120px;
+    background-color: #ecf0f1;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 8px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.input_title {
+
+    margin: 0;
+}
+
+.input_amount {
+
+    margin: 0;
+}
+
+.log-field {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.log-container {
+    overflow-y: auto;
+    max-height: 300px;
+}
+
+.log-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.log-table th,
+.log-table td {
+    border: 1px solid #ddd;
+    padding: 3px;
+    text-align: left;
+}
+
+.log-table th {
+    background-color: #f2f2f2;
+}
