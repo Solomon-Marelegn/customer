@@ -7,7 +7,7 @@ from ssh_conn import execute_command_on_vm
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'auhue'
+
 
 def connect():
     try:
@@ -229,4 +229,4 @@ def toggle_device():
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
